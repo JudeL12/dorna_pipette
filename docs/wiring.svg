@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 662" width="920" height="662" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+
+  <rect x="0" y="0" width="920" height="662" fill="#ffffff"/>
+
+  <defs>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <g fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- RED: pipette +24V -> supply +24V, routed over the top -->
+    <path d="M 300 215 L 340 215 L 340 82 L 610 82 L 610 145 L 640 145" stroke="#d32f2f"/>
+    <!-- BLACK: pipette GND -> supply V- (A) -->
+    <path d="M 300 250 L 560 250 L 560 180 L 640 180" stroke="#212121"/>
+    <!-- GREEN: pipette RX <- adapter TX -->
+    <path d="M 300 295 L 520 295 L 520 452 L 640 452" stroke="#2e7d32"/>
+    <!-- BLUE: pipette TX -> adapter RX -->
+    <path d="M 300 335 L 460 335 L 460 486 L 640 486" stroke="#1565c0"/>
+    <!-- BLACK: adapter GND -> supply V- (B) -->
+    <path d="M 800 340 L 800 210" stroke="#212121"/>
+  </g>
+
+  <!-- signal direction arrows -->
+  <g fill="none" stroke-width="3.5" stroke-linecap="round">
+    <path d="M 420 295 L 386 295" stroke="#2e7d32" marker-end="url(#arrGreen)"/>
+    <path d="M 380 335 L 414 335" stroke="#1565c0" marker-end="url(#arrBlue)"/>
+  </g>
+
+  <text x="350" y="70" font-size="13" font-weight="bold" fill="#d32f2f">RED — power only, never to adapter</text>
+
+  <!-- ============ PIPETTE ============ -->
+  <rect x="40" y="110" width="260" height="260" rx="8" fill="#ffffff" stroke="#333333" stroke-width="2.5"/>
+  <text x="170" y="147" font-size="17" font-weight="bold" fill="#111111" text-anchor="middle">DORNA PIPETTE</text>
+  <text x="170" y="169" font-size="13" fill="#666666" text-anchor="middle">4-wire cable</text>
+  <line x1="60" y1="186" x2="280" y2="186" stroke="#dddddd" stroke-width="1.5"/>
+
+  <text x="62" y="220" font-size="14" font-weight="bold" fill="#d32f2f">RED</text>
+  <text x="290" y="220" font-size="14" fill="#333333" text-anchor="end">+24 VDC</text>
+  <circle cx="300" cy="215" r="5.5" fill="#d32f2f"/>
+
+  <text x="62" y="255" font-size="14" font-weight="bold" fill="#212121">BLACK</text>
+  <text x="290" y="255" font-size="14" fill="#333333" text-anchor="end">GND</text>
+  <circle cx="300" cy="250" r="5.5" fill="#212121"/>
+
+  <text x="62" y="300" font-size="14" font-weight="bold" fill="#2e7d32">GREEN</text>
+  <text x="290" y="300" font-size="14" fill="#333333" text-anchor="end">RX</text>
+  <circle cx="300" cy="295" r="5.5" fill="#2e7d32"/>
+
+  <text x="62" y="340" font-size="14" font-weight="bold" fill="#1565c0">BLUE</text>
+  <text x="290" y="340" font-size="14" fill="#333333" text-anchor="end">TX</text>
+  <circle cx="300" cy="335" r="5.5" fill="#1565c0"/>
+
+  <!-- ============ POWER SUPPLY ============ -->
+  <rect x="640" y="60" width="240" height="150" rx="8" fill="#ffffff" stroke="#333333" stroke-width="2.5"/>
+  <text x="760" y="93" font-size="16" font-weight="bold" fill="#111111" text-anchor="middle">24 VDC SUPPLY</text>
+  <text x="760" y="112" font-size="12" fill="#666666" text-anchor="middle">has multiple V- terminals</text>
+  <line x1="660" y1="123" x2="860" y2="123" stroke="#dddddd" stroke-width="1.5"/>
+  <circle cx="640" cy="145" r="5.5" fill="#d32f2f"/>
+  <text x="656" y="150" font-size="14" fill="#333333">V+</text>
+  <circle cx="640" cy="180" r="5.5" fill="#212121"/>
+  <text x="656" y="185" font-size="14" fill="#333333">V-</text>
+  <circle cx="800" cy="210" r="5.5" fill="#212121"/>
+  <text x="800" y="200" font-size="14" fill="#333333" text-anchor="middle">V-</text>
+
+  <!-- ============ RS-232 ADAPTER ============ -->
+  <rect x="640" y="340" width="240" height="180" rx="8" fill="#ffffff" stroke="#333333" stroke-width="2.5"/>
+  <circle cx="800" cy="340" r="5.5" fill="#212121"/>
+  <text x="800" y="363" font-size="14" fill="#333333" text-anchor="middle">GND</text>
+  <text x="760" y="400" font-size="16" font-weight="bold" fill="#111111" text-anchor="middle">RS-232 ADAPTER</text>
+  <text x="760" y="419" font-size="12" fill="#666666" text-anchor="middle">38400 baud · 8N1 · no flow control</text>
+  <line x1="660" y1="430" x2="860" y2="430" stroke="#dddddd" stroke-width="1.5"/>
+  <circle cx="640" cy="452" r="5.5" fill="#2e7d32"/>
+  <text x="656" y="457" font-size="14" fill="#333333">TX</text>
+  <circle cx="640" cy="486" r="5.5" fill="#1565c0"/>
+  <text x="656" y="491" font-size="14" fill="#333333">RX</text>
+
+  <!-- ============ LEGEND ============ -->
+  <rect x="40" y="490" width="330" height="152" rx="6" fill="#fafafa" stroke="#cccccc" stroke-width="1.5"/>
+  <circle cx="60" cy="516" r="5.5" fill="#d32f2f"/>
+  <text x="76" y="521" font-size="13" fill="#333333"><tspan font-weight="bold" fill="#d32f2f">RED</tspan>  pipette +24 VDC → supply V+</text>
+  <circle cx="60" cy="544" r="5.5" fill="#212121"/>
+  <text x="76" y="549" font-size="13" fill="#333333"><tspan font-weight="bold" fill="#212121">BLACK</tspan>  pipette GND → supply V-</text>
+  <circle cx="60" cy="572" r="5.5" fill="#2e7d32"/>
+  <text x="76" y="577" font-size="13" fill="#333333"><tspan font-weight="bold" fill="#2e7d32">GREEN</tspan>  pipette RX → adapter TX</text>
+  <circle cx="60" cy="600" r="5.5" fill="#1565c0"/>
+  <text x="76" y="605" font-size="13" fill="#333333"><tspan font-weight="bold" fill="#1565c0">BLUE</tspan>  pipette TX → adapter RX</text>
+  <circle cx="60" cy="628" r="5.5" fill="#212121"/>
+  <text x="76" y="633" font-size="13" fill="#333333"><tspan font-weight="bold" fill="#212121">BLACK</tspan>  adapter GND → supply V-</text>
+
+  <!-- ============ GROUND NOTE ============ -->
+  <text x="400" y="547" font-size="13" font-weight="bold" fill="#111111">Both grounds return to the supply.</text>
+  <text x="400" y="569" font-size="13" fill="#555555">The pipette's V- return and the RS-232 signal ground</text>
+  <text x="400" y="589" font-size="13" fill="#555555">must share the same reference. Landing both on the</text>
+  <text x="400" y="609" font-size="13" fill="#555555">supply's V- terminals does that — no separate</text>
+  <text x="400" y="629" font-size="13" fill="#555555">ground block needed. Any two V- terminals will do.</text>
+
+
+</svg>
