@@ -131,7 +131,7 @@ Errors: `{addr}<10` = parameter out of range. `{addr}<14` = invalid register.
 
 - [dorna_pipette/pipette.py](dorna_pipette/pipette.py) — the driver (`DornaPipette`)
 - [notebooks/pipette_test.ipynb](notebooks/pipette_test.ipynb) — interactive bench test:
-  connect → home → tip check → aspirate/dispense → eject → calibration → soak test →
+  connect → home → tip check → aspirate/dispense → eject → soak test →
   raw command console
 - [examples/basic_usage.py](examples/basic_usage.py) — minimal script
 - [docs/wiring.svg](docs/wiring.svg) — wiring diagram
