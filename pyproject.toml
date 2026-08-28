@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dorna_pipette"
+version = "0.1.0"
+description = "Standalone driver and bench-test notebook for the Dorna pipette"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = [
+    "pyserial>=3.5",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyter"]
+
+[tool.setuptools]
+packages = ["dorna_pipette"]
